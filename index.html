@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Block Blast</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <div class="info-panel">
+        <h2>Retro Block Blast</h2>
+        <div class="info-item">
+            SCORE: <span id="score" class="score-value">0</span>
+        </div>
+        <div class="info-item">
+            HI-SCORE: <span id="highScore" class="high-score-value">0</span>
+        </div>
+        <div class="info-item">
+            LEVEL: <span id="level" class="level-value">1</span>
+        </div>
+        <div class="info-item next-piece-item">
+            NEXT
+            <div class="next-piece-container">
+                <canvas id="nextPieceCanvas" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <div class="controls">
+            <strong>CONTROLS:</strong>
+            <br>
+            &#8592; Left, &#8594; Right: Move
+            <br>
+            &#8595; Down: Soft Drop
+            <br>
+            Space: Hard Drop
+            <br>
+            &#8593; Up: Rotate
+            <br>
+            P: Pause/Resume
+        </div>
+        <div class="button-group">
+            <button id="startButton" class="start-button">START</button>
+            <button id="pauseButton" class="game-button" style="display: none;">PAUSE</button>
+            <button id="newGameButton" class="game-button" style="display: none;">NEW GAME</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="controls-touch">
+        <div class="control-group">
+            <button class="control-button" id="rotateBtn">&#8635;</button>
+            <button class="control-button" id="hardDropBtn">&#8681;</button>
+        </div>
+        <div class="control-group">
+            <button class="control-button" id="leftBtn">&#8592;</button>
+            <button class="control-button" id="downBtn">&#8595;</button>
+            <button class="control-button" id="rightBtn">&#8594;</button>
+        </div>
+    </div>
+</div>
+
+<div id="gameOverModal" class="modal">
+    <div class="modal-content">
+        <h2>GAME OVER</h2>
+        <p>Your final score is: <span id="finalScore">0</span></p>
+        <p>High Score: <span id="modalHighScore">0</span></p>
+        <button id="restartButton" class="restart-button">PLAY AGAIN</button>
+    </div>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
